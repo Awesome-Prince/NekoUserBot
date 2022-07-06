@@ -10,7 +10,7 @@
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-The Support group can be reached out to at [Koyūki • Support](https://telegram.dog/Koyuki_Support), where you can ask for help about [NekoUserBot](https://telegram.dog/Neko_UserBot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group can be reached out to at [Koyūki • Support](https://telegram.dog/Koyuki_Support), where you can ask for help about [NekoUserBot](https://telegram.dog/NekoXUserBOT), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
 <details>
 	<summary>Heroku Deploy</summary>
