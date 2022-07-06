@@ -1,0 +1,58 @@
+
+import os 
+import time
+import logging
+from pyrogram import Client
+from aiohttp import ClientSession
+from telethon.sessions import MemorySession
+from telethon import TelegramClient
+
+
+# enable logging
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[logging.FileHandler('logs.txt'),
+              logging.StreamHandler()],
+    level=logging.INFO)
+
+#bot =  [uptime,starttime,endtime]
+
+StartTime = time.time()
+
+def get_readable_time(seconds: int) -> str:
+    count = 0
+    ping_time = ""
+    time_list = []
+    time_suffix_list = ["s", "m", "h", "days"]
+    while count < 4:
+        count += 1
+        remainder, result = divmod(seconds, 60) if count < 3 else divmod(seconds, 24)
+        if seconds == 0 and remainder == 0:
+            break
+        time_list.append(int(result))
+        seconds = int(remainder)
+    for x in range(len(time_list)):
+        time_list[x] = str(time_list[x]) + time_suffix_list[x]
+    if len(time_list) == 4:
+        ping_time += time_list.pop() + ", "
+    time_list.reverse()
+    ping_time += ":".join(time_list)
+    return ping_time
+                  
+
+API_ID = os.environ.get("API_ID", None)
+API_HASH = os.environ.get("API_HASH", None)
+SESSION = os.environ.get("SESSION", None) 
+BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
+
+#install aiohttp session
+print('[NEKOUSERBOT] Initializing AIOHTTP Session')
+aiohttpsession = ClientSession()
+
+#install telethon
+print("[NekoRobot]: Initializing Telethon Client")
+updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
+telethn = TelegramClient(MemorySession(), API_ID, API_HASH)
+
+bot = Client("NekoUserBot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, plugins=dict(root="{}/plugins".format(__name__)))
+neko = Client(session_string=SESSION, api_id=API_ID, api_hash=API_HASH, name="Neko")
