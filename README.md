@@ -4,7 +4,7 @@
 ### ╔═━「 Creator Info/Credits 」
 
 + ➢ [Lovely-Prince](https://github.com/Awesome-Prince) : OWNER | DEV
-+ ➢ [STB](https://github.com/Ctzfamily) : DEV
++ ➢ [CTZFAMILY](https://github.com/Ctzfamily) : DEV
 
 ╘═━「 Any other authorship/credits can be seen through the commits. 」
 
