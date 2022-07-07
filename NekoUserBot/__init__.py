@@ -47,10 +47,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
 print('[NEKOUSERBOT] Initializing AIOHTTP Session')
 aiohttpsession = ClientSession()
 
-#install telethon
-print("[NekoRobot]: Initializing Telethon Client")
-updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient(MemorySession(), API_ID, API_HASH)
+
 
 bot = Client("NekoUserBot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, plugins=dict(root="{}/plugins".format(__name__)))
 neko = Client(session_string=SESSION, api_id=API_ID, api_hash=API_HASH, name="Neko")
