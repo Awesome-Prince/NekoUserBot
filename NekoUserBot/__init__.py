@@ -4,8 +4,6 @@ import time
 import logging
 from pyrogram import Client
 from aiohttp import ClientSession
-from telethon.sessions import MemorySession
-from telethon import TelegramClient
 
 
 # enable logging
