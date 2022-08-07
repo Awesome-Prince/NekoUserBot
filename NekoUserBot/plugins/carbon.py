@@ -1,9 +1,10 @@
-from pyrogram.types import Message
-from pyrogram import filters
-from NekoUserBot import neko, aiohttpsession as aiosession
-from asyncio import gather
-from config import OWNER_ID, HANDLER
 from io import BytesIO
+
+from pyrogram import filters
+
+from config import HANDLER, OWNER_ID
+from NekoUserBot import aiohttpsession as aiosession
+from NekoUserBot import neko
 
 
 async def make_carbon(code):
@@ -14,7 +15,7 @@ async def make_carbon(code):
     return image
 
 
-@neko.on_message(filters.command("carbon",prefixes=HANDLER) & filters.user(OWNER_ID))
+@neko.on_message(filters.command("carbon", prefixes=HANDLER) & filters.user(OWNER_ID))
 async def carbon_func(_, message):
     if not message.reply_to_message:
         return await message.reply_text("ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ᴄᴀʀʙᴏɴ.")
@@ -23,6 +24,10 @@ async def carbon_func(_, message):
     m = await message.reply_text("😴 ɢᴇɴᴇʀᴀᴛɪɴɢ ᴄᴀʀʙᴏɴ...")
     carbon = await make_carbon(message.reply_to_message.text)
     await m.edit("ᴜᴩʟᴏᴀᴅɪɴɢ ɢᴇɴᴇʀᴀᴛᴇᴅ ᴄᴀʀʙᴏɴ...")
-    await neko.send_photo(message.chat.id, carbon,caption="   ( [ᴍᴀᴅᴇ  ʙʏ  ᴋᴀᴛsᴜᴋɪ ᴛᴇᴀᴍ](https://t.me/team_neko) )")
+    await neko.send_photo(
+        message.chat.id,
+        carbon,
+        caption="   ( [ᴍᴀᴅᴇ  ʙʏ  ᴋᴀᴛsᴜᴋɪ ᴛᴇᴀᴍ](https://t.me/team_neko) )",
+    )
     await m.delete()
     carbon.close()

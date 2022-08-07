@@ -1,36 +1,34 @@
-import sys
 import io
-
-
-from subprocess import getoutput as run
+import sys
 import traceback
+from subprocess import getoutput as run
 
-from NekoUserBot import neko
-from config import ( OWNER_ID, HANDLER) 
 from pyrogram import filters
 
+from config import HANDLER, OWNER_ID
+from NekoUserBot import neko
 
 
-@neko.on_message(filters.user(OWNER_ID) & filters.command("logs",prefixes=HANDLER))
+@neko.on_message(filters.user(OWNER_ID) & filters.command("logs", prefixes=HANDLER))
 def logs(_, m):
-       run_logs = run("tail logs.txt")
-       msg = m.reply_text("sᴇɴᴅɪɴɢ ʟᴏɢs...")
-       with io.BytesIO(str.encode(run_logs)) as logs:
-            logs.name = "neko.txt"
-            m.reply_document(
-                document=logs,
-            )
-       msg.delete()
+    run_logs = run("tail logs.txt")
+    msg = m.reply_text("sᴇɴᴅɪɴɢ ʟᴏɢs...")
+    with io.BytesIO(str.encode(run_logs)) as logs:
+        logs.name = "neko.txt"
+        m.reply_document(
+            document=logs,
+        )
+    msg.delete()
 
-@neko.on_message(filters.user(OWNER_ID) & filters.command("sh",prefixes=HANDLER))
+
+@neko.on_message(filters.user(OWNER_ID) & filters.command("sh", prefixes=HANDLER))
 def sh(_, m):
     code = m.text.replace(m.text.split(" ")[0], "")
     x = run(code)
-    m.reply_text(
-         f"**SHELL**: `{code}`\n\n**OUTPUT**:\n`{x}`")
+    m.reply_text(f"**SHELL**: `{code}`\n\n**OUTPUT**:\n`{x}`")
 
-    
-@neko.on_message(filters.user(OWNER_ID) & filters.command("eval",prefixes=HANDLER))
+
+@neko.on_message(filters.user(OWNER_ID) & filters.command("eval", prefixes=HANDLER))
 async def eval(client, message):
     status_message = await message.reply_text("Processing ...")
     cmd = message.text.split(" ", maxsplit=1)[1]

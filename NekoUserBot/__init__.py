@@ -1,21 +1,21 @@
-
-import os 
-import time
 import logging
-from pyrogram import Client
-from aiohttp import ClientSession
+import os
+import time
 
+from aiohttp import ClientSession
+from pyrogram import Client
 
 # enable logging
 logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[logging.FileHandler('logs.txt'),
-              logging.StreamHandler()],
-    level=logging.INFO)
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[logging.FileHandler("logs.txt"), logging.StreamHandler()],
+    level=logging.INFO,
+)
 
-#bot =  [uptime,starttime,endtime]
+# bot =  [uptime,starttime,endtime]
 
 StartTime = time.time()
+
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -36,18 +36,23 @@ def get_readable_time(seconds: int) -> str:
     time_list.reverse()
     ping_time += ":".join(time_list)
     return ping_time
-                  
+
 
 API_ID = os.environ.get("API_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
-SESSION = os.environ.get("SESSION", None) 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
+SESSION = os.environ.get("SESSION", None)
+BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
 
-#install aiohttp session
-print('[NEKOUSERBOT] Initializing AIOHTTP Session')
+# install aiohttp session
+print("[NEKOUSERBOT] Initializing AIOHTTP Session")
 aiohttpsession = ClientSession()
 
 
-
-bot = Client("NekoUserBot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, plugins=dict(root="{}/plugins".format(__name__)))
+bot = Client(
+    "NekoUserBot",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN,
+    plugins=dict(root="{}/plugins".format(__name__)),
+)
 neko = Client(session_string=SESSION, api_id=API_ID, api_hash=API_HASH, name="Neko")

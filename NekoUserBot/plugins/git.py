@@ -1,15 +1,20 @@
-from pyrogram import filters 
-from NekoUserBot import neko
-import config
-from requests import get
 import os
 
-@neko.on_message(filters.user(config.OWNER_ID) & filters.command("git",prefixes=config.HANDLER))
+from pyrogram import filters
+from requests import get
+
+import config
+from NekoUserBot import neko
+
+
+@neko.on_message(
+    filters.user(config.OWNER_ID) & filters.command("git", prefixes=config.HANDLER)
+)
 async def git(_, message):
     if len(message.command) < 2:
         return await message.reply_text("gime github username")
     user = message.text.split(None, 1)[1]
-    res = get(f'https://api.github.com/users/{user}').json()
+    res = get(f"https://api.github.com/users/{user}").json()
     data = f"""**Name**: {res['name']}
 **UserName**: {res['login']}
 **Link**: [{res['login']}]({res['html_url']})
@@ -23,9 +28,8 @@ async def git(_, message):
 **Acc Created**: {res['created_at']}
 """
     with open(f"{user}.jpg", "wb") as f:
-        kek = get(res['avatar_url']).content
+        kek = get(res["avatar_url"]).content
         f.write(kek)
 
     await message.reply_photo(f"{user}.jpg", caption=data)
     os.remove(f"{user}.jpg")
-     

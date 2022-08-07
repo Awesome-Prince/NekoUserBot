@@ -1,15 +1,14 @@
 from pyrogram import filters
+
 from config import HANDLER, OWNER_ID
 from NekoUserBot import neko
 
 
-@neko.on_message(filters.command("webss",prefixes=HANDLER) & filters.user(OWNER_ID))
+@neko.on_message(filters.command("webss", prefixes=HANDLER) & filters.user(OWNER_ID))
 async def take_ss(_, message):
     try:
         if len(message.command) != 2:
-            return await message.reply_text(
-                "**» ɢɪᴠᴇ ᴀ ᴜʀʟ ᴛᴏ ғᴇᴛᴄʜ sᴄʀᴇᴇɴsʜᴏᴛ...**"
-            )
+            return await message.reply_text("**» ɢɪᴠᴇ ᴀ ᴜʀʟ ᴛᴏ ғᴇᴛᴄʜ sᴄʀᴇᴇɴsʜᴏᴛ...**")
         url = message.text.split(None, 1)[1]
         m = await message.reply_text("**» ᴛʀʏɪɴɢ ᴛᴏ ᴛᴀᴋᴇ sᴄʀᴇᴇɴsʜᴏᴛ...**")
         await m.edit("**» ᴜᴩʟᴏᴀᴅɪɴɢ ᴄᴀᴩᴛᴜʀᴇᴅ sᴄʀᴇᴇɴsʜᴏᴛ...**")

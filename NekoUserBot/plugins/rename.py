@@ -1,10 +1,12 @@
-from NekoUserBot import neko
-from config import OWNER_ID, HANDLER
 import os
+
 from pyrogram import filters
 
+from config import HANDLER, OWNER_ID
+from NekoUserBot import neko
 
-@neko.on_message(filters.command("rename",prefixes=HANDLER) & filters.user(OWNER_ID))
+
+@neko.on_message(filters.command("rename", prefixes=HANDLER) & filters.user(OWNER_ID))
 def rename(_, message):
 
     try:
@@ -19,4 +21,3 @@ def rename(_, message):
         x.edit("Uploading.....")
         message.reply_document(path)
         os.remove(path)
-
