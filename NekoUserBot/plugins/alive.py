@@ -4,7 +4,7 @@ from pyrogram import __version__ as pyrover
 from pyrogram import filters
 
 from config import ALIVE_TEXT, HANDLER, NEKO, OWNER_ID
-from NekoUserBot import neko, StartTime, get_readable_time
+from NekoUserBot import StartTime, get_readable_time, neko
 
 
 @neko.on_message(filters.command("alive", prefixes=HANDLER) & filters.user(OWNER_ID))
