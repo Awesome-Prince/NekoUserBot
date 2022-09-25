@@ -3,7 +3,7 @@ import time
 from pyrogram import __version__ as pyrover
 from pyrogram import filters
 
-from config import ALIVE_TEXT, HANDLER, OWNER_ID, NEKO
+from config import ALIVE_TEXT, HANDLER, NEKO, OWNER_ID
 from NekoUserBot import StartTime, get_readable_time
 
 
