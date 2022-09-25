@@ -50,7 +50,7 @@ no_reply_user = """ ╒═══「 Appraisal results:」
 **ᴘᴇʀᴍᴀʟɪɴᴋ**: {}
 **ᴜsᴇʀʙɪᴏ**: {}
 
-( [ᴍᴀᴅᴇ  ʙʏ  ᴋᴀᴛsᴜᴋɪ ᴛᴇᴀᴍ](https://t.me/team_neko) )
+( [Powered By Awesome-Prince](https://github.com/Awesome-Princ) )
 """
 
 
