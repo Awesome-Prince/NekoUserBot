@@ -27,7 +27,7 @@ async def carbon_func(_, message):
     await neko.send_photo(
         message.chat.id,
         carbon,
-        caption="   ( [ᴍᴀᴅᴇ  ʙʏ  ᴋᴀᴛsᴜᴋɪ ᴛᴇᴀᴍ](https://t.me/team_neko) )",
+        caption="**Meet Me Here🙈 @Besties_XD ✨🥀**",
     )
     await m.delete()
     carbon.close()
