@@ -8,10 +8,10 @@ from NekoUserBot import neko
 async def cinfo(_, m):
     reply = m.reply_to_message
     if not reply:
-        await m.reply_text("yoo! ultra noob reply to channel")
+        await m.reply_text("yoo! baka reply to channel")
         return
     if not reply.sender_chat:
-        await m.reply_text("yoo! ultra noob reply to channel")
+        await m.reply_text("yoo! baka reply to channel")
         return
     if reply.sender_chat:
         message = await m.reply_text("information gathering!!!")
@@ -50,7 +50,7 @@ no_reply_user = """ ╒═══「 Appraisal results:」
 **ᴘᴇʀᴍᴀʟɪɴᴋ**: {}
 **ᴜsᴇʀʙɪᴏ**: {}
 
-( [Powered By Awesome-Prince](https://github.com/Awesome-Princ) )
+**Meet Me Here🙈 @Besties_XD ✨🥀**
 """
 
 
