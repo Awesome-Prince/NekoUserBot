@@ -1,4 +1,4 @@
-LOG_GROUP_ID = -1001564751507
+LOG_GROUP_ID = -1001621736306
 OWNER_ID = [5629305049]
 HANDLER = ["~", ".", "!"]
 ALIVE_TEXT = """ **~  𝑁𝑒𝑘𝑜 𝑆𝑦𝑠𝑡𝑒𝑚:**
