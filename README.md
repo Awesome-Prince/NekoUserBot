@@ -3,14 +3,14 @@
 
 ### ╔═━「 Creator Info/Credits 」
 
-+ ➢ [Lovely-Prince](https://github.com/Awesome-Prince) : OWNER | DEV
-+ ➢ [CTZFAMILY](https://github.com/Ctzfamily) : DEV
++ [Lovely-Prince](https://github.com/Awesome-Prince) : OWNER | DEV
++ [CTZFAMILY](https://github.com/Ctzfamily) : DEV
 
 ╘═━「 Any other authorship/credits can be seen through the commits. 」
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-The Support group can be reached out to at [Koyūki • Support](https://telegram.dog/Koyuki_Support), where you can ask for help about [NekoUserBot](https://telegram.dog/NekoXUserBOT), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group can be reached out to at [Programmer • Support](https://telegram.dog/ProgrammerSupport), where you can ask for help about [NekoUserBot](https://telegram.dog/Its_Iz_Prince_xd), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
 <details>
 	<summary>Heroku Deploy</summary>
