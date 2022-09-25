@@ -17,4 +17,4 @@ async def write(_, message):
     hand = "https://apis.xditya.me/write?text=" + name
     await m.edit("ᴜᴘʟᴏᴀᴅɪɴɢ...")
     await m.delete()
-    await message.reply_photo(hand, caption="**ᴍᴀᴅᴇ ʙʏ ᴋᴀᴛsᴜᴋɪ**")
+    await message.reply_photo(hand, caption="**Meet Me Here🙈 @Besties_XD ✨🥀**")
