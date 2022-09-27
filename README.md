@@ -39,8 +39,8 @@ The Easiest Way to Deploy This Bot is Via Heroku.
 </p>
 
 ```console
-    ~$ git clone https://github.com/Awesome-Prince/NekoUserBot.git
-    ~$ cd NekoUserBot
+    ~$ git clone https://github.com/Thegtash/GtashUserBot.git
+    ~$ cd GtashUserBot
     ~$ cp config.py
 ```
 
