@@ -1,7 +1,7 @@
 """
 BSD 3-Clause License
 
-Copyright (c) 2022, Thegtash
+Copyright (c) 2022, LovelyPrince
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -81,10 +81,10 @@ aiohttpsession = ClientSession()
 
 
 bot = Client(
-    "GtashUserBot",
+    "NekoUserBot",
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
     plugins=dict(root="{}/plugins".format(__name__)),
 )
-GtashUserbot = Client(session_string=SESSION, api_id=API_ID, api_hash=API_HASH, name="Gtash*)
+Neko = Client(session_string=SESSION, api_id=API_ID, api_hash=API_HASH, name="Gtash*)
