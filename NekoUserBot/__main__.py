@@ -1,7 +1,7 @@
 """
 BSD 3-Clause License
 
-Copyright (c) 2022, Thegtash
+Copyright (c) 2022, LovelyPrince
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
