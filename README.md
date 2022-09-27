@@ -1,16 +1,16 @@
-# NekoUserBot
+# GtashUserBot
 
 
 ### ╔═━「 Creator Info/Credits 」
 
-+ [Lovely-Prince](https://github.com/Awesome-Prince) : OWNER | DEV
-+ [CTZFAMILY](https://github.com/Ctzfamily) : DEV
++ [Thegtash](https://github.com/Thegtash) : OWNER | DEV
++ [Lovely-Prince](https://github.com/Awesome-Prince) : DEV
 
 ╘═━「 Any other authorship/credits can be seen through the commits. 」
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-The Support group can be reached out to at [Programmer • Support](https://telegram.dog/ProgrammerSupport), where you can ask for help about [NekoUserBot](https://telegram.dog/Its_Iz_Prince_xd), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group can be reached out to at [Programmer • Support](https://telegram.dog/programmer_support), where you can ask for help about [GtashUserbot](https://telegram.dog/Me_Iz_Gtash), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
 <details>
 	<summary>Heroku Deploy</summary>
@@ -21,7 +21,7 @@ The Easiest Way to Deploy This Bot is Via Heroku.
 	
   <h1>
     <p align="center">
-        <a href="https://heroku.com/deploy?template=https://github.com/Awesome-Prince/NekoUserBot.git">
+        <a href="https://heroku.com/deploy?template=https://github.com/Thegtash/GtashUserBot.git">
             <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
         </a>
     </p>
